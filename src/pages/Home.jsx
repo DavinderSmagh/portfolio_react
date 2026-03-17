@@ -1,15 +1,26 @@
 export default function Home() {
   return (
-    <section style={{ padding: '140px 24px 80px', textAlign: 'center' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <section style={{
+      minHeight: '70vh',           // ← prevents collapsing when content is short
+      padding: '140px 24px 80px',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         <h1 style={{ fontSize: '3.8rem', marginBottom: '1.2rem' }}>
-          Hi, I'm Davinder
+          Hi, I'm Davinder Singh
         </h1>
         <p style={{ fontSize: '1.5rem', color: '#555', marginBottom: '2.5rem' }}>
-          Full-Stack Developer • JavaScript • Java • MySQL
+          Full-Stack Developer and QA Professional
         </p>
-        <a 
-          href="/projects" 
+        <p style={{ fontSize: '1.5rem', color: '#555', marginBottom: '2.5rem' }}>
+          Currently, I leverage a unique blend of development and quality engineering to build and ship high-quality software. I have hands-on experience in Manual and Automation testing for both mobile and web applications using Appium, ensuring seamless user experiences across all platforms.
+        </p>
+        
+        <a
+          href="./pages/projects"
           style={{
             display: 'inline-block',
             padding: '14px 36px',

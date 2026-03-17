@@ -16,13 +16,23 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/"          element={<Home />} />
-          <Route path="/about"     element={<About />} />
-          <Route path="/projects"  element={<Projects />} />
-          <Route path="/contact"   element={<Contact />} />
-          
-          {/* Optional: 404 page */}
-          <Route path="*" element={<div>404 - Page not found</div>} />
+          <Route path="/" element={<Home />} />
+
+          {/* Allow common variations people type in URL */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Optional: 404 fallback */}
+          <Route path="*" element={
+            <div style={{ padding: '140px 24px', textAlign: 'center' }}>
+              <h1>404 - Page Not Found</h1>
+              <p>Go back to <a href="/">Home</a></p>
+            </div>
+          } />
         </Routes>
       </main>
 

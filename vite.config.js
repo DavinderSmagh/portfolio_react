@@ -1,8 +1,12 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio_react/',          // ← VERY IMPORTANT: change to your repo name
+  base: '/portfolio_react/',   // keep this for production
+
+  server: {
+    historyApiFallback: true,   // ← this is the magic line for dev
+  },
 })
